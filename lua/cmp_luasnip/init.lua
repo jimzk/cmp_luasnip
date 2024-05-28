@@ -86,7 +86,7 @@ function source:complete(params, callback)
 					if not snip.hidden then
 						ft_items[#ft_items + 1] = {
 							word = snip.trigger,
-							label = snip.trigger,
+							label = snip.name and snip.name or snip.trigger,
 							kind = cmp.lsp.CompletionItemKind.Snippet,
 							data = {
 								filetype = ft,
